@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admit Card Generator | University Updates</title>
+    <style>
+        :root {
+            --primary-color: #0056b3; /* CCSU Blue theme */
+            --secondary-color: #f8f9fa;
+            --border-color: #dee2e6;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5;
+            margin: 0;
+            padding: 20px;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .notice {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ffeeba;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box; /* Ensures padding doesn't break layout */
+        }
+
+        button.btn-generate {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        button.btn-generate:hover {
+            background-color: #004494;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* Responsive for mobile */
+        @media (max-width: 600px) {
+            .form-section {
+                grid-template-columns: 1fr;
+            }
+            .full-width {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>University Updates</h1>
+            <p>Admit Card Generator (Unofficial Tool)</p>
+        </header>
+
+        <!-- Disclaimer similar to the original site -->
+        <div class="notice">
+            <strong>📢 Important:</strong> This admit card is for information purposes only. It is NOT valid for official exams. Please visit the official university website (ccsuniversity.ac.in) for the valid admit card.
+        </div>
+
+        <form id="admitCardForm" onsubmit="generateCard(event)">
+            <div class="form-section">
+                <!-- Row 1 -->
+                <div class="full-width">
+                    <label>Candidate Name:</label>
+                    <input type="text" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Row 2 -->
+                <div>
+                    <label>Roll Number:</label>
+                    <input type="text" placeholder="e.g. 2112345678" required>
+                </div>
+                <div>
+                    <label>Enrollment No:</label>
+                    <input type="text" placeholder="e.g. M21123456" required>
+                </div>
+
+                <!-- Row 3 -->
+                <div>
+                    <label>Father's Name:</label>
+                    <input type="text" placeholder="Father's Name">
+                </div>
+                <div>
+                    <label>Mother's Name:</label>
+                    <input type="text" placeholder="Mother's Name">
+                </div>
+
+                <!-- Row 4 -->
+                <div class="full-width">
+                    <label>Course / Semester:</label>
+                    <select>
+                        <option>B.A. Semester VI</option>
+                        <option>B.Sc. Semester VI</option>
+                        <option>B.Com. Semester VI</option>
+                        <option>M.A. Semester IV</option>
+                    </select>
+                </div>
+                
+                <!-- Row 5 -->
+                <div class="full-width">
+                    <label>College Name:</label>
+                    <input type="text" placeholder="Enter your college name">
+                </div>
+            </div>
+
+            <button type="submit" class="btn-generate">Generate Admit Card</button>
+        </form>
+
+        <div class="footer">
+            <p>&copy; 2024 University Updates. Not affiliated with CCSU.</p>
+        </div>
+    </div>
+
+    <script>
+        function generateCard(event) {
+            event.preventDefault();
+            alert("This is a demo! In the real version, this would generate a printable PDF view.");
+            // In the real site, this likely redirects to a new page using URL parameters
+            // window.location.href = "view_admit_card.html?name=" + ...
+        }
+    </script>
+
+</body>
+</html>
