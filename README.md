@@ -119,7 +119,7 @@
 
     <div class="container">
         <header>
-            <h1>University Updates</h1>
+            <h1> TILO </h1>
             <p>Admit Card Generator (Unofficial Tool)</p>
         </header>
 
